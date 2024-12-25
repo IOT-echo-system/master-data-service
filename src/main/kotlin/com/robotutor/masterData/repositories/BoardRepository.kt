@@ -1,4 +1,4 @@
-package com.robotutor.seedData.repositories
+package com.robotutor.masterData.repositories
 
 import com.robotutor.masterData.models.Board
 import org.springframework.data.repository.reactive.ReactiveCrudRepository
