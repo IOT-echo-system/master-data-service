@@ -12,7 +12,7 @@ import reactor.kotlin.core.publisher.switchIfEmpty
 @Service
 class LocationService(private val locationRepository: LocationRepository) {
 
-    fun getLocationByPincode(pincode: String): Mono<Location> {
+    fun getLocationByPincode(pincode: Int): Mono<Location> {
         return locationRepository.findByPincode(pincode)
             .switchIfEmpty {
                 createMonoError(DataNotFoundException(IOTError.IOT0601))

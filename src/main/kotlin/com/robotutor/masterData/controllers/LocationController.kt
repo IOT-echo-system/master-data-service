@@ -13,7 +13,7 @@ import reactor.core.publisher.Mono
 class LocationController(private val locationService: LocationService) {
 
     @GetMapping("/{pincode}")
-    fun getLocation(@PathVariable pincode: String): Mono<LocationView> {
+    fun getLocation(@PathVariable pincode: Int): Mono<LocationView> {
         return locationService.getLocationByPincode(pincode).map { LocationView.from(it) }
     }
 

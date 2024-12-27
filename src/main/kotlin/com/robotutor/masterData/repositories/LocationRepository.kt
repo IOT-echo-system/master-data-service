@@ -7,5 +7,5 @@ import reactor.core.publisher.Mono
 
 @Repository
 interface LocationRepository : ReactiveCrudRepository<Location, String> {
-    fun findByPincode(pincode: String): Mono<Location>
+    fun findByPincode(pincode: Int): Mono<Location>
 }

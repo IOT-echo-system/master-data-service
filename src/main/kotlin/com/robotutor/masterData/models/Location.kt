@@ -11,8 +11,7 @@ const val LOCATION_COLLECTION = "locations"
 data class Location(
     @Id
     val id: String? = null,
-    val pincode: String,
-    val city: String,
+    val pincode: Int,
     val district: String,
     val state: String
 )
